@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the League\Fractal package.
+ * This file is part of the PHPOpenSourceSaver\Fractal package.
  *
  * (c) Phil Sturgeon <me@philsturgeon.uk>
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace League\Fractal\Resource;
+namespace PHPOpenSourceSaver\Fractal\Resource;
 
-use League\Fractal\TransformerAbstract;
+use PHPOpenSourceSaver\Fractal\TransformerAbstract;
 
 abstract class ResourceAbstract implements ResourceInterface
 {

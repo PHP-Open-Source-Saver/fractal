@@ -1,11 +1,11 @@
 <?php
 
-namespace League\Fractal\Test;
+namespace PHPOpenSourceSaver\Fractal\Test;
 
-use League\Fractal\Manager;
-use League\Fractal\Resource\ResourceInterface;
-use League\Fractal\Scope;
-use League\Fractal\ScopeFactory;
+use PHPOpenSourceSaver\Fractal\Manager;
+use PHPOpenSourceSaver\Fractal\Resource\ResourceInterface;
+use PHPOpenSourceSaver\Fractal\Scope;
+use PHPOpenSourceSaver\Fractal\ScopeFactory;
 use PHPUnit\Framework\TestCase;
 
 class ScopeFactoryTest extends TestCase

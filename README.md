@@ -5,6 +5,21 @@
 ![The PHP League Tests](https://github.com/thephpleague/fractal/workflows/The%20PHP%20League%20Tests/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/league/fractal.svg?style=flat-square)](https://packagist.org/packages/league/fractal)
 
+## Credits
+[This repository is a fork from original thephpleague/fractal](https://fractal.thephpleague.com/), we decided to make an independent fork due to the lack of updates to the original package, and lack of a process for volunteers to become maintainers within the php league ecosystem of packages.
+
+## Migrating from [`thephpleague/fractal`](https://github.com/thephpleague/fractal)
+
+This uses different namespace to `thephpleague/fractal`, but overall, provides the same API, that makes migration to this repository pretty easy:
+
+1) Run `composer remove thephpleague/fractal`
+   > **Info** An error will appear because the package is still in use, ignore it.
+2) Replace all the occurrences of `League\Fractal` with `PHPOpenSourceSaver\Fractal`.
+   > **Tip**: You can use *Find and Replace* feature of your IDE. Try it with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+3) Run `composer require php-open-source-saver/fractal`
+
+## Notes
+
 Fractal provides a presentation and transformation layer for complex data output, the like found in
 RESTful APIs, and works really well with JSON. Think of this as a view layer for your JSON/YAML/etc.
 
@@ -34,24 +49,20 @@ please send a patch via pull request.
 Via Composer
 
 ``` bash
-$ composer require league/fractal
+$ composer require php-open-source-saver
 ```
 
 ## Requirements
 
 The following versions of PHP are supported by this version:
 
-&gt;= PHP 7.4
+&gt;= PHP 8.1
 
 ## Documentation
 
 Fractal has [full documentation](http://fractal.thephpleague.com), powered by [Jekyll](http://jekyllrb.com/).
 
 Contribute to this documentation in the [gh-pages branch](https://github.com/thephpleague/fractal/tree/gh-pages/).
-
-## Todo
-
-- add HAL serializers
 
 ## Testing
 

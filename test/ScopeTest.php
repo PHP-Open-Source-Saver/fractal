@@ -1,18 +1,18 @@
-<?php namespace League\Fractal\Test;
+<?php namespace PHPOpenSourceSaver\Fractal\Test;
 
 use InvalidArgumentException;
-use League\Fractal\Manager;
-use League\Fractal\Pagination\Cursor;
-use League\Fractal\Resource\Collection;
-use League\Fractal\Resource\Item;
-use League\Fractal\Resource\NullResource;
-use League\Fractal\Resource\Primitive;
-use League\Fractal\Scope;
-use League\Fractal\Serializer\ArraySerializer;
-use League\Fractal\Test\Stub\ArraySerializerWithNull;
-use League\Fractal\Test\Stub\Transformer\DefaultIncludeBookTransformer;
-use League\Fractal\Test\Stub\Transformer\NullIncludeBookTransformer;
-use League\Fractal\Test\Stub\Transformer\PrimitiveIncludeBookTransformer;
+use PHPOpenSourceSaver\Fractal\Manager;
+use PHPOpenSourceSaver\Fractal\Pagination\Cursor;
+use PHPOpenSourceSaver\Fractal\Resource\Collection;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Resource\NullResource;
+use PHPOpenSourceSaver\Fractal\Resource\Primitive;
+use PHPOpenSourceSaver\Fractal\Scope;
+use PHPOpenSourceSaver\Fractal\Serializer\ArraySerializer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\ArraySerializerWithNull;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\DefaultIncludeBookTransformer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\NullIncludeBookTransformer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\PrimitiveIncludeBookTransformer;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -32,7 +32,7 @@ class ScopeTest extends TestCase
         $this->assertSame($scope->getScopeIdentifier(), 'book');
         $childScope = $scope->embedChildScope('author', $resource);
 
-        $this->assertInstanceOf('League\Fractal\Scope', $childScope);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Scope', $childScope);
     }
 
     public function testGetManager()
@@ -42,7 +42,7 @@ class ScopeTest extends TestCase
 
         $scope = new Scope(new Manager(), $resource, 'book');
 
-        $this->assertInstanceOf('League\Fractal\Manager', $scope->getManager());
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Manager', $scope->getManager());
     }
 
     public function testGetResource()
@@ -52,12 +52,12 @@ class ScopeTest extends TestCase
 
         $scope = new Scope(new Manager(), $resource, 'book');
 
-        $this->assertInstanceOf('League\Fractal\Resource\ResourceAbstract', $scope->getResource());
-        $this->assertInstanceOf('League\Fractal\Resource\Item', $scope->getResource());
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Resource\ResourceAbstract', $scope->getResource());
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Resource\Item', $scope->getResource());
     }
 
     /**
-     * @covers \League\Fractal\Scope::toArray
+     * @covers \PHPOpenSourceSaver\Fractal\Scope::toArray
      */
     public function testToArray()
     {
@@ -74,7 +74,7 @@ class ScopeTest extends TestCase
     }
 
     /**
-     * @covers \League\Fractal\Scope::jsonSerialize()
+     * @covers \PHPOpenSourceSaver\Fractal\Scope::jsonSerialize()
      */
     public function testJsonSerializable()
     {
@@ -188,7 +188,7 @@ class ScopeTest extends TestCase
         $manager = new Manager();
         $manager->parseIncludes(['foo', 'bar', 'baz.bart']);
 
-        $scope = new Scope($manager, Mockery::mock('League\Fractal\Resource\ResourceAbstract'));
+        $scope = new Scope($manager, Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\ResourceAbstract'));
 
         $this->assertTrue($scope->isRequested('foo'));
         $this->assertTrue($scope->isRequested('bar'));
@@ -196,7 +196,7 @@ class ScopeTest extends TestCase
         $this->assertTrue($scope->isRequested('baz.bart'));
         $this->assertFalse($scope->isRequested('nope'));
 
-        $childScope = $scope->embedChildScope('baz', Mockery::mock('League\Fractal\Resource\ResourceAbstract'));
+        $childScope = $scope->embedChildScope('baz', Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\ResourceAbstract'));
         $this->assertTrue($childScope->isRequested('bart'));
         $this->assertFalse($childScope->isRequested('foo'));
         $this->assertFalse($childScope->isRequested('bar'));
@@ -208,8 +208,8 @@ class ScopeTest extends TestCase
         $manager = new Manager();
         $manager->parseIncludes(['foo', 'bar', 'baz.bart']);
 
-        $scope = new Scope($manager, Mockery::mock('League\Fractal\Resource\ResourceAbstract'));
-        $childScope = $scope->embedChildScope('baz', Mockery::mock('League\Fractal\Resource\ResourceAbstract'));
+        $scope = new Scope($manager, Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\ResourceAbstract'));
+        $childScope = $scope->embedChildScope('baz', Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\ResourceAbstract'));
 
         $manager->parseExcludes('bar');
 
@@ -230,7 +230,7 @@ class ScopeTest extends TestCase
 		$manager = new Manager();
         $manager->parseIncludes('book');
 
-        $resource = Mockery::mock('League\Fractal\Resource\ResourceAbstract', [
+        $resource = Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\ResourceAbstract', [
             ['bar' => 'baz'],
             function () {},
         ])->makePartial();
@@ -244,7 +244,7 @@ class ScopeTest extends TestCase
         $manager = new Manager();
         $manager->parseIncludes('book,price');
 
-        $transformer = Mockery::mock('League\Fractal\TransformerAbstract')->makePartial();
+        $transformer = Mockery::mock('PHPOpenSourceSaver\Fractal\TransformerAbstract')->makePartial();
         $transformer->shouldReceive('getAvailableIncludes')->twice()->andReturn(['book']);
         $transformer->shouldReceive('transform')->once()->andReturnUsing(function (array $data) {
             return $data;
@@ -277,7 +277,7 @@ class ScopeTest extends TestCase
 
     public function testToArrayWithSideloadedIncludes()
     {
-        $serializer = Mockery::mock('League\Fractal\Serializer\ArraySerializer')->makePartial();
+        $serializer = Mockery::mock('PHPOpenSourceSaver\Fractal\Serializer\ArraySerializer')->makePartial();
         $serializer->shouldReceive('sideloadIncludes')->andReturn(true);
         $serializer->shouldReceive('item')->andReturnUsing(function ($key, $data) {
             return ['data' => $data];
@@ -290,7 +290,7 @@ class ScopeTest extends TestCase
         $manager->parseIncludes('book');
         $manager->setSerializer($serializer);
 
-        $transformer = Mockery::mock('League\Fractal\TransformerAbstract')->makePartial();
+        $transformer = Mockery::mock('PHPOpenSourceSaver\Fractal\TransformerAbstract')->makePartial();
         $transformer->shouldReceive('getAvailableIncludes')->twice()->andReturn(['book']);
         $transformer->shouldReceive('transform')->once()->andReturnUsing(function (array $data) {
             return $data;
@@ -330,7 +330,7 @@ class ScopeTest extends TestCase
     {
         $manager = new Manager();
 
-        $transformer = Mockery::mock('League\Fractal\TransformerAbstract');
+        $transformer = Mockery::mock('PHPOpenSourceSaver\Fractal\TransformerAbstract');
         $transformer->shouldReceive('transform')->once()->andReturn('simple string');
         $transformer->shouldReceive('setCurrentScope')->once()->andReturnSelf();
         $transformer->shouldNotReceive('getAvailableIncludes');
@@ -351,7 +351,7 @@ class ScopeTest extends TestCase
     {
         $manager = new Manager();
 
-        $transformer = Mockery::mock('League\Fractal\TransformerAbstract');
+        $transformer = Mockery::mock('PHPOpenSourceSaver\Fractal\TransformerAbstract');
         $transformer->shouldReceive('transform')->once()->andReturn($this->simpleItem);
         $transformer->shouldReceive('getAvailableIncludes')->once()->andReturn([]);
         $transformer->shouldReceive('getDefaultIncludes')->once()->andReturn([]);
@@ -367,7 +367,7 @@ class ScopeTest extends TestCase
     {
         $manager = new Manager();
 
-        $transformer = Mockery::mock('League\Fractal\TransformerAbstract');
+        $transformer = Mockery::mock('PHPOpenSourceSaver\Fractal\TransformerAbstract');
         $transformer->shouldReceive('transform')->once()->andReturn(['foo' => 'bar']);
         $transformer->shouldReceive('getAvailableIncludes')->once()->andReturn([]);
         $transformer->shouldReceive('getDefaultIncludes')->once()->andReturn([]);
@@ -381,17 +381,17 @@ class ScopeTest extends TestCase
     }
 
     /**
-     * @covers \League\Fractal\Scope::executeResourceTransformers
+     * @covers \PHPOpenSourceSaver\Fractal\Scope::executeResourceTransformers
      */
     public function testCreateDataWithClassFuckKnows()
     {
-		$this->expectExceptionObject(new InvalidArgumentException('Argument $resource should be an instance of League\Fractal\Resource\Item or League\Fractal\Resource\Collection'));
+		$this->expectExceptionObject(new InvalidArgumentException('Argument $resource should be an instance of PHPOpenSourceSaver\Fractal\Resource\Item or PHPOpenSourceSaver\Fractal\Resource\Collection'));
 
         $manager = new Manager();
 
-        $transformer = Mockery::mock('League\Fractal\TransformerAbstract')->makePartial();
+        $transformer = Mockery::mock('PHPOpenSourceSaver\Fractal\TransformerAbstract')->makePartial();
 
-        $resource = Mockery::mock('League\Fractal\Resource\ResourceAbstract', [$this->simpleItem, $transformer])->makePartial();
+        $resource = Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\ResourceAbstract', [$this->simpleItem, $transformer])->makePartial();
         $scope = $manager->createData($resource);
         $scope->toArray();
     }
@@ -404,7 +404,7 @@ class ScopeTest extends TestCase
             return $data;
         });
 
-        $paginator = Mockery::mock('League\Fractal\Pagination\IlluminatePaginatorAdapter')->makePartial();
+        $paginator = Mockery::mock('PHPOpenSourceSaver\Fractal\Pagination\IlluminatePaginatorAdapter')->makePartial();
 
         $total = 100;
         $perPage = $count = 5;
@@ -545,7 +545,7 @@ class ScopeTest extends TestCase
     }
 
     /**
-     * @covers \League\Fractal\Scope::toArray
+     * @covers \PHPOpenSourceSaver\Fractal\Scope::toArray
      */
     public function testNullResourceDataAndJustMeta()
     {
@@ -561,7 +561,7 @@ class ScopeTest extends TestCase
     }
 
     /**
-     * @covers \League\Fractal\Scope::toArray
+     * @covers \PHPOpenSourceSaver\Fractal\Scope::toArray
      * @dataProvider fieldsetsProvider
      */
     public function testToArrayWithFieldsets($fieldsetsToParse, $expected)
@@ -601,12 +601,12 @@ class ScopeTest extends TestCase
     }
 
     /**
-     * @covers \League\Fractal\Scope::toArray
+     * @covers \PHPOpenSourceSaver\Fractal\Scope::toArray
      * @dataProvider fieldsetsWithMandatorySerializerFieldsProvider
      */
     public function testToArrayWithFieldsetsAndMandatorySerializerFields($fieldsetsToParse, $expected)
     {
-        $serializer = Mockery::mock('League\Fractal\Serializer\DataArraySerializer')->makePartial();
+        $serializer = Mockery::mock('PHPOpenSourceSaver\Fractal\Serializer\DataArraySerializer')->makePartial();
         $serializer->shouldReceive('getMandatoryFields')->andReturn(['foo']);
 
         $resource = new Item(
@@ -679,12 +679,12 @@ class ScopeTest extends TestCase
     }
 
     /**
-     * @covers \League\Fractal\Scope::toArray
+     * @covers \PHPOpenSourceSaver\Fractal\Scope::toArray
      * @dataProvider fieldsetsWithSideLoadIncludesProvider
      */
     public function testToArrayWithSideloadedIncludesAndFieldsets($fieldsetsToParse, $expected)
     {
-        $serializer = Mockery::mock('League\Fractal\Serializer\DataArraySerializer')->makePartial();
+        $serializer = Mockery::mock('PHPOpenSourceSaver\Fractal\Serializer\DataArraySerializer')->makePartial();
         $serializer->shouldReceive('sideloadIncludes')->andReturn(true);
         $serializer->shouldReceive('item')->andReturnUsing(
             function ($key, $data) {
@@ -734,7 +734,7 @@ class ScopeTest extends TestCase
 
     protected function createTransformerWithIncludedResource($resourceName, $transformResult)
     {
-        $transformer = Mockery::mock('League\Fractal\TransformerAbstract')->makePartial();
+        $transformer = Mockery::mock('PHPOpenSourceSaver\Fractal\TransformerAbstract')->makePartial();
         $transformer->shouldReceive('getAvailableIncludes')->twice()->andReturn([$resourceName]);
         $transformer->shouldReceive('transform')->once()->andReturnUsing(
             function (array $data) {

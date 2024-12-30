@@ -1,7 +1,7 @@
 <?php
-namespace League\Fractal\Test\Pagination;
+namespace PHPOpenSourceSaver\Fractal\Test\Pagination;
 
-use League\Fractal\Pagination\PagerfantaPaginatorAdapter;
+use PHPOpenSourceSaver\Fractal\Pagination\PagerfantaPaginatorAdapter;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ class PagerfantaPaginatorAdapterTest extends TestCase
         });
 
         $this->assertInstanceOf(
-            'League\Fractal\Pagination\PaginatorInterface',
+            'PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface',
             $adapter
         );
 

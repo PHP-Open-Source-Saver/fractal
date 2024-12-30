@@ -1,6 +1,6 @@
-<?php namespace League\Fractal\Test;
+<?php namespace PHPOpenSourceSaver\Fractal\Test;
 
-use League\Fractal\ParamBag;
+use PHPOpenSourceSaver\Fractal\ParamBag;
 use LogicException;
 use PHPUnit\Framework\TestCase;
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the League\Fractal package.
+ * This file is part of the PHPOpenSourceSaver\Fractal package.
  *
  * (c) Phil Sturgeon <me@philsturgeon.uk>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace League\Fractal\Resource;
+namespace PHPOpenSourceSaver\Fractal\Resource;
 
 interface ResourceInterface
 {
@@ -29,7 +29,7 @@ interface ResourceInterface
     /**
      * Get the transformer.
      *
-     * @return callable|\League\Fractal\TransformerAbstract|null
+     * @return callable|\PHPOpenSourceSaver\Fractal\TransformerAbstract|null
      */
     public function getTransformer();
 
@@ -43,7 +43,7 @@ interface ResourceInterface
     /**
      * Set the transformer.
      *
-     * @param callable|\League\Fractal\TransformerAbstract $transformer
+     * @param callable|\PHPOpenSourceSaver\Fractal\TransformerAbstract $transformer
      */
     public function setTransformer($transformer): self;
 

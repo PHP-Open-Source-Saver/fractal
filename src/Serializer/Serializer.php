@@ -1,9 +1,9 @@
 <?php
-namespace League\Fractal\Serializer;
+namespace PHPOpenSourceSaver\Fractal\Serializer;
 
-use League\Fractal\Pagination\CursorInterface;
-use League\Fractal\Pagination\PaginatorInterface;
-use League\Fractal\Resource\ResourceInterface;
+use PHPOpenSourceSaver\Fractal\Pagination\CursorInterface;
+use PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface;
+use PHPOpenSourceSaver\Fractal\Resource\ResourceInterface;
 
 interface Serializer
 {

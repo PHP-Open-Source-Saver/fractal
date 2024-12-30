@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the League\Fractal package.
+ * This file is part of the PHPOpenSourceSaver\Fractal package.
  *
  * (c) Phil Sturgeon <me@philsturgeon.uk>
  *
@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  **/
 
-namespace League\Fractal;
+namespace PHPOpenSourceSaver\Fractal;
 
 use InvalidArgumentException;
-use League\Fractal\Resource\Collection;
-use League\Fractal\Resource\Item;
-use League\Fractal\Resource\Primitive;
-use League\Fractal\Resource\NullResource;
-use League\Fractal\Resource\ResourceInterface;
-use League\Fractal\Serializer\Serializer;
+use PHPOpenSourceSaver\Fractal\Resource\Collection;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Resource\Primitive;
+use PHPOpenSourceSaver\Fractal\Resource\NullResource;
+use PHPOpenSourceSaver\Fractal\Resource\ResourceInterface;
+use PHPOpenSourceSaver\Fractal\Serializer\Serializer;
 
 /**
  * Scope
@@ -257,7 +257,7 @@ class Scope implements \JsonSerializable
     {
         if (! ($this->resource instanceof Primitive)) {
             throw new InvalidArgumentException(
-                'Argument $resource should be an instance of League\Fractal\Resource\Primitive'
+                'Argument $resource should be an instance of PHPOpenSourceSaver\Fractal\Resource\Primitive'
             );
         }
 
@@ -299,8 +299,8 @@ class Scope implements \JsonSerializable
             $includedData = [];
         } else {
             throw new InvalidArgumentException(
-                'Argument $resource should be an instance of League\Fractal\Resource\Item'
-                .' or League\Fractal\Resource\Collection'
+                'Argument $resource should be an instance of PHPOpenSourceSaver\Fractal\Resource\Item'
+                .' or PHPOpenSourceSaver\Fractal\Resource\Collection'
             );
         }
 
@@ -373,7 +373,7 @@ class Scope implements \JsonSerializable
      *
      * @internal
      *
-     * @param \League\Fractal\TransformerAbstract $transformer
+     * @param \PHPOpenSourceSaver\Fractal\TransformerAbstract $transformer
      * @param mixed                               $data
      */
     protected function fireIncludedTransformers($transformer, $data): array

@@ -1,14 +1,14 @@
-<?php namespace League\Fractal\Test\Serializer;
+<?php namespace PHPOpenSourceSaver\Fractal\Test\Serializer;
 
 use InvalidArgumentException;
-use League\Fractal\Manager;
-use League\Fractal\Resource\Collection;
-use League\Fractal\Resource\Item;
-use League\Fractal\Scope;
-use League\Fractal\Serializer\JsonApiSerializer;
-use League\Fractal\Test\Stub\Transformer\JsonApiAuthorTransformer;
-use League\Fractal\Test\Stub\Transformer\JsonApiBookTransformer;
-use League\Fractal\Test\Stub\Transformer\JsonApiEmptyTransformer;
+use PHPOpenSourceSaver\Fractal\Manager;
+use PHPOpenSourceSaver\Fractal\Resource\Collection;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Scope;
+use PHPOpenSourceSaver\Fractal\Serializer\JsonApiSerializer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\JsonApiAuthorTransformer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\JsonApiBookTransformer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\JsonApiEmptyTransformer;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -2050,7 +2050,7 @@ class JsonApiSerializerTest extends TestCase
         $nextUrl = 'http://example.com/books/?page=3';
         $lastUrl = 'http://example.com/books/?page=5';
 
-        $paginator = Mockery::mock('League\Fractal\Pagination\PaginatorInterface');
+        $paginator = Mockery::mock('PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface');
         $paginator->shouldReceive('getCurrentPage')->andReturn($currentPage);
         $paginator->shouldReceive('getLastPage')->andReturn($lastPage);
         $paginator->shouldReceive('getTotal')->andReturn($total);
@@ -2190,7 +2190,7 @@ class JsonApiSerializerTest extends TestCase
         $nextUrl = 'http://example.com/books/?page=2';
         $lastUrl = 'http://example.com/books/?page=5';
 
-        $paginator = Mockery::mock('League\Fractal\Pagination\PaginatorInterface');
+        $paginator = Mockery::mock('PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface');
         $paginator->shouldReceive('getCurrentPage')->andReturn($currentPage);
         $paginator->shouldReceive('getLastPage')->andReturn($lastPage);
         $paginator->shouldReceive('getTotal')->andReturn($total);
@@ -2328,7 +2328,7 @@ class JsonApiSerializerTest extends TestCase
         $previousUrl = 'http://example.com/books/?page=4';
         $lastUrl = 'http://example.com/books/?page=5';
 
-        $paginator = Mockery::mock('League\Fractal\Pagination\PaginatorInterface');
+        $paginator = Mockery::mock('PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface');
         $paginator->shouldReceive('getCurrentPage')->andReturn($currentPage);
         $paginator->shouldReceive('getLastPage')->andReturn($lastPage);
         $paginator->shouldReceive('getTotal')->andReturn($total);

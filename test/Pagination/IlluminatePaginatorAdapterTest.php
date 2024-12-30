@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Fractal\Test\Pagination;
+namespace PHPOpenSourceSaver\Fractal\Test\Pagination;
 
-use League\Fractal\Pagination\IlluminatePaginatorAdapter;
+use PHPOpenSourceSaver\Fractal\Pagination\IlluminatePaginatorAdapter;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -27,7 +27,7 @@ class IlluminatePaginatorAdapterTest extends TestCase
 
         $adapter = new IlluminatePaginatorAdapter($paginator);
 
-        $this->assertInstanceOf('League\Fractal\Pagination\PaginatorInterface', $adapter);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface', $adapter);
         $this->assertInstanceOf('Illuminate\Contracts\Pagination\LengthAwarePaginator', $adapter->getPaginator());
 
         $this->assertSame($currentPage, $adapter->getCurrentPage());

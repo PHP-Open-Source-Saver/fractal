@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the League\Fractal package.
+ * This file is part of the PHPOpenSourceSaver\Fractal package.
  *
  * (c) Phil Sturgeon <me@philsturgeon.uk>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace League\Fractal;
+namespace PHPOpenSourceSaver\Fractal;
 
-use League\Fractal\Resource\ResourceInterface;
-use League\Fractal\Serializer\DataArraySerializer;
-use League\Fractal\Serializer\Serializer;
+use PHPOpenSourceSaver\Fractal\Resource\ResourceInterface;
+use PHPOpenSourceSaver\Fractal\Serializer\DataArraySerializer;
+use PHPOpenSourceSaver\Fractal\Serializer\Serializer;
 
 /**
  * Manager

@@ -1,8 +1,8 @@
 <?php
-namespace League\Fractal\Test\Pagination;
+namespace PHPOpenSourceSaver\Fractal\Test\Pagination;
 
 use Doctrine\ORM\Query;
-use League\Fractal\Pagination\DoctrinePaginatorAdapter;
+use PHPOpenSourceSaver\Fractal\Pagination\DoctrinePaginatorAdapter;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -38,7 +38,7 @@ class DoctrinePaginatorAdapterTest extends TestCase
         });
 
         $this->assertInstanceOf(
-            'League\Fractal\Pagination\PaginatorInterface',
+            'PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface',
             $adapter
         );
 
