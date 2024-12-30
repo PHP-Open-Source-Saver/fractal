@@ -2,8 +2,9 @@
 
 [![Latest Version](https://img.shields.io/github/release/thephpleague/fractal.svg?style=flat-square)](https://github.com/thephpleague/fractal/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-![The PHP League Tests](https://github.com/thephpleague/fractal/workflows/The%20PHP%20League%20Tests/badge.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/league/fractal.svg?style=flat-square)](https://packagist.org/packages/league/fractal)
+[![CI Tests](https://github.com/api-ecosystem-for-laravel/dingo-api/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/PHP-Open-Source-Saver/fractal/actions)
+[![Development Version](https://img.shields.io/packagist/vpre/PHP-Open-Source-Saver/fractal.svg?style=flat-square)](https://packagist.org/packages/PHP-Open-Source-Saver/fractal)
+
 
 ## Credits
 [This repository is a fork from original thephpleague/fractal](https://fractal.thephpleague.com/), we decided to make an independent fork due to the lack of updates to the original package, and lack of a process for volunteers to become maintainers within the php league ecosystem of packages.
@@ -77,14 +78,16 @@ Please see [CONTRIBUTING](https://github.com/thephpleague/fractal/blob/master/CO
 
 ## Maintainers
 
-- [Korvin Szanto](https://github.com/korvinszanto)
-- [Matt Trask](https://github.com/matthewtrask)
+- [Max Snow](https://github.com/specialtactics)
+
 
 ## Credits
 
 - [Graham Daniels](https://github.com/greydnls)
 - [Andrew Willis](https://github.com/willishq)
 - [Phil Sturgeon](https://github.com/philsturgeon)
+- [Korvin Szanto](https://github.com/korvinszanto)
+- [Matt Trask](https://github.com/matthewtrask)
 - [All Contributors](https://github.com/thephpleague/fractal/contributors)
 
 ## Reporting a Vulnerability
