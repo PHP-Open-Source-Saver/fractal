@@ -11,7 +11,7 @@
 
 namespace PHPOpenSourceSaver\Fractal\Pagination;
 
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Contracts\Pagination\Paginator;
 
 /**
  * A paginator adapter for illuminate/pagination.
@@ -21,12 +21,12 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
  */
 class IlluminateSimplePaginatorAdapter implements PaginatorInterface
 {
-    protected LengthAwarePaginator $paginator;
+    protected Paginator $paginator;
 
     /**
-     * Create a new illuminate pagination adapter.
+     * Create a new illuminate simple pagination adapter.
      */
-    public function __construct(LengthAwarePaginator $paginator)
+    public function __construct(Paginator $paginator)
     {
         $this->paginator = $paginator;
     }
@@ -44,7 +44,7 @@ class IlluminateSimplePaginatorAdapter implements PaginatorInterface
      */
     public function getLastPage(): int
     {
-        return $this->paginator->lastPage();
+        return 0;
     }
 
     /**
@@ -52,7 +52,7 @@ class IlluminateSimplePaginatorAdapter implements PaginatorInterface
      */
     public function getTotal(): int
     {
-        return $this->paginator->total();
+        return 0;
     }
 
     /**
@@ -82,7 +82,7 @@ class IlluminateSimplePaginatorAdapter implements PaginatorInterface
     /**
      * Get the paginator instance.
      */
-    public function getPaginator(): LengthAwarePaginator
+    public function getPaginator(): Paginator
     {
         return $this->paginator;
     }
