@@ -1,13 +1,13 @@
 <?php
 
-namespace League\Fractal\Test\Serializer;
+namespace PHPOpenSourceSaver\Fractal\Test\Serializer;
 
-use League\Fractal\Manager;
-use League\Fractal\Resource\Item;
-use League\Fractal\Scope;
-use League\Fractal\Serializer\ArraySerializer;
-use League\Fractal\Test\Stub\Serializer\RootSerializer;
-use League\Fractal\Test\Stub\Transformer\GenericBookNoResourceKeyTransformer;
+use PHPOpenSourceSaver\Fractal\Manager;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Scope;
+use PHPOpenSourceSaver\Fractal\Serializer\ArraySerializer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Serializer\RootSerializer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\GenericBookNoResourceKeyTransformer;
 use PHPUnit\Framework\TestCase;
 
 class CustomArraySerializerTest extends TestCase

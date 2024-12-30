@@ -1,10 +1,10 @@
-<?php namespace League\Fractal\Test;
+<?php namespace PHPOpenSourceSaver\Fractal\Test;
 
 use InvalidArgumentException;
-use League\Fractal\Manager;
-use League\Fractal\ParamBag;
-use League\Fractal\Resource\Collection;
-use League\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Manager;
+use PHPOpenSourceSaver\Fractal\ParamBag;
+use PHPOpenSourceSaver\Fractal\Resource\Collection;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -67,7 +67,7 @@ class ManagerTest extends TestCase
 
         $params = $manager->getIncludeParams('foo');
 
-        $this->assertInstanceOf('League\Fractal\ParamBag', $params);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\ParamBag', $params);
 
 
         $this->assertSame(['5', '1'], $params['limit']);
@@ -81,7 +81,7 @@ class ManagerTest extends TestCase
 
         $params = $manager->getIncludeParams('foo');
 
-        $this->assertInstanceOf('League\Fractal\ParamBag', $params);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\ParamBag', $params);
 
         $this->assertSame(['5', '1'], $params['limit']);
         $this->assertSame(['name'], $params['order']);
@@ -213,7 +213,7 @@ class ManagerTest extends TestCase
 
         $rootScope = $manager->createData($resource);
 
-        $this->assertInstanceOf('League\Fractal\Scope', $rootScope);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Scope', $rootScope);
 
 
         $this->assertSame(['data' => ['foo' => 'bar']], $rootScope->toArray());
@@ -226,7 +226,7 @@ class ManagerTest extends TestCase
 
         $rootScope = $manager->createData($resource);
 
-        $this->assertInstanceOf('League\Fractal\Scope', $rootScope);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Scope', $rootScope);
 
 
         $this->assertSame(['data' => [['foo' => 'bar']]], $rootScope->toArray());

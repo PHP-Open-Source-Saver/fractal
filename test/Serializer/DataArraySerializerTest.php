@@ -1,14 +1,14 @@
-<?php namespace League\Fractal\Test\Resource;
+<?php namespace PHPOpenSourceSaver\Fractal\Test\Resource;
 
-use League\Fractal\Manager;
-use League\Fractal\Resource\Collection;
-use League\Fractal\Resource\Item;
-use League\Fractal\Resource\NullResource;
-use League\Fractal\Scope;
-use League\Fractal\Serializer\DataArraySerializer;
-use League\Fractal\Test\Stub\Serializer\RootSerializer;
-use League\Fractal\Test\Stub\Transformer\GenericBookNoResourceKeyTransformer;
-use League\Fractal\Test\Stub\Transformer\GenericBookTransformer;
+use PHPOpenSourceSaver\Fractal\Manager;
+use PHPOpenSourceSaver\Fractal\Resource\Collection;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Resource\NullResource;
+use PHPOpenSourceSaver\Fractal\Scope;
+use PHPOpenSourceSaver\Fractal\Serializer\DataArraySerializer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Serializer\RootSerializer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\GenericBookNoResourceKeyTransformer;
+use PHPOpenSourceSaver\Fractal\Test\Stub\Transformer\GenericBookTransformer;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 

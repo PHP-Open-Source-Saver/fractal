@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the League\Fractal package.
+ * This file is part of the PHPOpenSourceSaver\Fractal package.
  *
  * (c) Phil Sturgeon <me@philsturgeon.uk>
  *
@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace League\Fractal;
+namespace PHPOpenSourceSaver\Fractal;
 
-use League\Fractal\Resource\Collection;
-use League\Fractal\Resource\Item;
-use League\Fractal\Resource\NullResource;
-use League\Fractal\Resource\Primitive;
-use League\Fractal\Resource\ResourceInterface;
+use PHPOpenSourceSaver\Fractal\Resource\Collection;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Resource\NullResource;
+use PHPOpenSourceSaver\Fractal\Resource\Primitive;
+use PHPOpenSourceSaver\Fractal\Resource\ResourceInterface;
 
 /**
  * All Transformer classes should extend this to utilize the convenience methods
@@ -147,7 +147,7 @@ abstract class TransformerAbstract
      *
      * @throws \Exception
      *
-     * @return \League\Fractal\Resource\ResourceInterface|false
+     * @return \PHPOpenSourceSaver\Fractal\Resource\ResourceInterface|false
      */
     protected function callIncludeMethod(Scope $scope, string $includeName, $data)
     {
@@ -181,7 +181,7 @@ abstract class TransformerAbstract
                 'Invalid return value from %s::%s(). Expected %s, received %s.',
                 __CLASS__,
                 $methodName,
-                'League\Fractal\Resource\ResourceInterface',
+                'PHPOpenSourceSaver\Fractal\Resource\ResourceInterface',
                 is_object($resource) ? get_class($resource) : gettype($resource)
             ));
         }

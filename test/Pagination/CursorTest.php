@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Fractal\Test\Pagination;
+namespace PHPOpenSourceSaver\Fractal\Test\Pagination;
 
-use League\Fractal\Pagination\Cursor;
+use PHPOpenSourceSaver\Fractal\Pagination\Cursor;
 use PHPUnit\Framework\TestCase;
 
 class CursorTest extends TestCase

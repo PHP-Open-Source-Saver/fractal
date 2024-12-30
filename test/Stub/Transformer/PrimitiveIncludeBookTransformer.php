@@ -1,7 +1,7 @@
-<?php namespace League\Fractal\Test\Stub\Transformer;
+<?php namespace PHPOpenSourceSaver\Fractal\Test\Stub\Transformer;
 
-use League\Fractal\Resource\Primitive;
-use League\Fractal\TransformerAbstract;
+use PHPOpenSourceSaver\Fractal\Resource\Primitive;
+use PHPOpenSourceSaver\Fractal\TransformerAbstract;
 
 class PrimitiveIncludeBookTransformer extends TransformerAbstract
 {

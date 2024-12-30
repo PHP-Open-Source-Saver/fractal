@@ -1,6 +1,6 @@
-<?php namespace League\Fractal\Test\Resource;
+<?php namespace PHPOpenSourceSaver\Fractal\Test\Resource;
 
-use League\Fractal\Resource\Item;
+use PHPOpenSourceSaver\Fractal\Resource\Item;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -28,21 +28,21 @@ class ItemTest extends TestCase
     }
 
     /**
-     * @covers \League\Fractal\Resource\Item::setResourceKey
+     * @covers \PHPOpenSourceSaver\Fractal\Resource\Item::setResourceKey
      */
     public function testSetResourceKey()
     {
-        $item = Mockery::mock('League\Fractal\Resource\Item')->makePartial();
+        $item = Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\Item')->makePartial();
 
         $this->assertSame($item, $item->setResourceKey('foo'));
     }
 
     /**
-     * @covers \League\Fractal\Resource\Item::getResourceKey
+     * @covers \PHPOpenSourceSaver\Fractal\Resource\Item::getResourceKey
      */
     public function testGetResourceKey()
     {
-        $item = Mockery::mock('League\Fractal\Resource\Item')->makePartial();
+        $item = Mockery::mock('PHPOpenSourceSaver\Fractal\Resource\Item')->makePartial();
         $item->setResourceKey('foo');
 
         $this->assertSame('foo', $item->getResourceKey());

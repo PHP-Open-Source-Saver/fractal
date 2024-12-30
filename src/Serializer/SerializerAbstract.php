@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the League\Fractal package.
+ * This file is part of the PHPOpenSourceSaver\Fractal package.
  *
  * (c) Phil Sturgeon <me@philsturgeon.uk>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace League\Fractal\Serializer;
+namespace PHPOpenSourceSaver\Fractal\Serializer;
 
-use League\Fractal\Pagination\CursorInterface;
-use League\Fractal\Pagination\PaginatorInterface;
-use League\Fractal\Resource\ResourceInterface;
+use PHPOpenSourceSaver\Fractal\Pagination\CursorInterface;
+use PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface;
+use PHPOpenSourceSaver\Fractal\Resource\ResourceInterface;
 
 abstract class SerializerAbstract implements Serializer
 {

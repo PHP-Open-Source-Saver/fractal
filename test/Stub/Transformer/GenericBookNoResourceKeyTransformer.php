@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Fractal\Test\Stub\Transformer;
+namespace PHPOpenSourceSaver\Fractal\Test\Stub\Transformer;
 
-use League\Fractal\TransformerAbstract;
+use PHPOpenSourceSaver\Fractal\TransformerAbstract;
 
 class GenericBookNoResourceKeyTransformer extends TransformerAbstract
 {

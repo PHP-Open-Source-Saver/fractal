@@ -1,7 +1,7 @@
 <?php
-namespace League\Fractal\Test\Pagination;
+namespace PHPOpenSourceSaver\Fractal\Test\Pagination;
 
-use League\Fractal\Pagination\ZendFrameworkPaginatorAdapter;
+use PHPOpenSourceSaver\Fractal\Pagination\ZendFrameworkPaginatorAdapter;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ class ZendFrameworkPaginatorAdapterTest extends TestCase
             return 'http://example.com/foo?page='.$page;
         });
 
-        $this->assertInstanceOf('League\Fractal\Pagination\PaginatorInterface', $adapter);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface', $adapter);
 
         $this->assertSame($currentPage, $adapter->getCurrentPage());
         $this->assertSame($lastPage, $adapter->getLastPage());

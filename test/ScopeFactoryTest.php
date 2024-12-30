@@ -1,18 +1,18 @@
 <?php
 
-namespace League\Fractal\Test;
+namespace PHPOpenSourceSaver\Fractal\Test;
 
-use League\Fractal\Manager;
-use League\Fractal\Resource\ResourceInterface;
-use League\Fractal\Scope;
-use League\Fractal\ScopeFactory;
+use PHPOpenSourceSaver\Fractal\Manager;
+use PHPOpenSourceSaver\Fractal\Resource\ResourceInterface;
+use PHPOpenSourceSaver\Fractal\Scope;
+use PHPOpenSourceSaver\Fractal\ScopeFactory;
 use PHPUnit\Framework\TestCase;
 
 class ScopeFactoryTest extends TestCase
 {
     public function testItImplementsScopeFactoryInterface()
     {
-        $this->assertInstanceOf('League\\Fractal\\ScopeFactoryInterface', $this->createSut());
+        $this->assertInstanceOf(\PHPOpenSourceSaver\Fractal\ScopeFactoryInterface::class, $this->createSut());
     }
 
     public function testItCreatesScopes()
@@ -25,7 +25,7 @@ class ScopeFactoryTest extends TestCase
 
         $scope = $sut->createScopeFor($manager, $resource, $scopeIdentifier);
 
-        $this->assertInstanceOf('League\\Fractal\\Scope', $scope);
+        $this->assertInstanceOf(\PHPOpenSourceSaver\Fractal\Scope::class, $scope);
         $this->assertSame($resource, $scope->getResource());
         $this->assertSame($scopeIdentifier, $scope->getScopeIdentifier());
     }
@@ -50,7 +50,7 @@ class ScopeFactoryTest extends TestCase
         $sut = $this->createSut();
         $scope = $sut->createChildScopeFor($manager, $scope, $resource, $scopeIdentifier);
 
-        $this->assertInstanceOf('League\\Fractal\\Scope', $scope);
+        $this->assertInstanceOf('PHPOpenSourceSaver\\Fractal\\Scope', $scope);
         $this->assertSame($resource, $scope->getResource());
         $this->assertSame($scopeIdentifier, $scope->getScopeIdentifier());
         $this->assertEquals($expectedParentScopes, $scope->getParentScopes());
@@ -69,7 +69,7 @@ class ScopeFactoryTest extends TestCase
      */
     private function createManager()
     {
-        return $this->getMockBuilder('League\\Fractal\\Manager')->getMock();
+        return $this->getMockBuilder('PHPOpenSourceSaver\\Fractal\\Manager')->getMock();
     }
 
     /**
@@ -77,6 +77,6 @@ class ScopeFactoryTest extends TestCase
      */
     private function createResource()
     {
-        return $this->getMockBuilder('League\\Fractal\\Resource\\ResourceInterface')->getMock();
+        return $this->getMockBuilder('PHPOpenSourceSaver\\Fractal\\Resource\\ResourceInterface')->getMock();
     }
 }

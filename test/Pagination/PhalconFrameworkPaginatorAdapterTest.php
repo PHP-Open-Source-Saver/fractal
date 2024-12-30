@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Fractal\Test\Pagination;
+namespace PHPOpenSourceSaver\Fractal\Test\Pagination;
 
-use League\Fractal\Pagination\PhalconFrameworkPaginatorAdapter;
+use PHPOpenSourceSaver\Fractal\Pagination\PhalconFrameworkPaginatorAdapter;
 use PHPUnit\Framework\TestCase;
 
 class PhalconFrameworkPaginatorAdapterTest extends TestCase
@@ -20,7 +20,7 @@ class PhalconFrameworkPaginatorAdapterTest extends TestCase
         $resultset->total_pages = 10;
 
         $adapter = new PhalconFrameworkPaginatorAdapter($resultset);
-        $this->assertInstanceOf('League\Fractal\Pagination\PaginatorInterface', $adapter);
+        $this->assertInstanceOf('PHPOpenSourceSaver\Fractal\Pagination\PaginatorInterface', $adapter);
         $this->assertSame(3, $adapter->getCurrentPage());
         $this->assertSame(10, $adapter->getCount());
         $this->assertSame(50, $adapter->getTotal());

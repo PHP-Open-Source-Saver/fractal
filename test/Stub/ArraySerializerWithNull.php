@@ -1,9 +1,9 @@
 <?php
 
 
-namespace League\Fractal\Test\Stub;
+namespace PHPOpenSourceSaver\Fractal\Test\Stub;
 
-use League\Fractal\Serializer\ArraySerializer;
+use PHPOpenSourceSaver\Fractal\Serializer\ArraySerializer;
 
 class ArraySerializerWithNull extends ArraySerializer
 {

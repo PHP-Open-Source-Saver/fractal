@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Fractal\Test\Stub\Serializer;
+namespace PHPOpenSourceSaver\Fractal\Test\Stub\Serializer;
 
-use League\Fractal\Serializer\DataArraySerializer;
+use PHPOpenSourceSaver\Fractal\Serializer\DataArraySerializer;
 
 class RootSerializer extends DataArraySerializer
 {
