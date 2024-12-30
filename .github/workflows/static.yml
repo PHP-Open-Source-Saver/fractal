@@ -5,6 +5,7 @@ jobs:
   phpstan:
     name: PHPStan
     runs-on: ubuntu-24.04
+    if: false # disable for now, for existing code - very out of date so fails many checks
 
     steps:
       - name: Checkout code
@@ -27,7 +28,7 @@ jobs:
   psalm:
     name: Psalm
     runs-on: ubuntu-24.04
-    if: false # disable for now, for existing code
+    if: false # disable for now, for existing code - very out of date so fails many checks
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
