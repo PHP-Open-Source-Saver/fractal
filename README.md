@@ -87,6 +87,9 @@ Please see [CONTRIBUTING](https://github.com/thephpleague/fractal/blob/master/CO
 - [Phil Sturgeon](https://github.com/philsturgeon)
 - [All Contributors](https://github.com/thephpleague/fractal/contributors)
 
+## Reporting a Vulnerability
+
+If you discover any security related issues, please email contact@maxsnow.me instead of using the issue tracker.
 
 ## License
 

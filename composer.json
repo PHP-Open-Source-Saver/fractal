@@ -20,6 +20,12 @@
             "email": "me@philsturgeon.uk",
             "homepage": "http://philsturgeon.uk/",
             "role": "Developer"
+        },
+        {
+            "name": "Max Snow",
+            "email": "contact@maxsnow.me",
+            "homepage": "https://maxsnow.me",
+            "role": "Developer"
         }
     ],
     "config": {
