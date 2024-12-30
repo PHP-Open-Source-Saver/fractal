@@ -42,7 +42,7 @@
         "phpstan/phpstan": "^1.4",
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "~3.4",
-        "vimeo/psalm": "^4.22",
+        "vimeo/psalm": "^5.20",
         "zendframework/zend-paginator": "~2.3"
     },
     "suggest": {
@@ -52,12 +52,12 @@
     },
     "autoload": {
         "psr-4": {
-            "League\\Fractal\\": "src"
+            "PHPOpenSourceSaver\\Fractal\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "League\\Fractal\\Test\\": "test"
+            "PHPOpenSourceSaver\\Fractal\\Test\\": "test"
         }
     },
     "scripts": {
