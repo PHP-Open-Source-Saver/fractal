@@ -1,8 +1,8 @@
 # Fractal
 
-[![Latest Version](https://img.shields.io/github/release/thephpleague/fractal.svg?style=flat-square)](https://github.com/thephpleague/fractal/releases)
+[![Latest Version](https://img.shields.io/github/release/PHP-Open-Source-Saver/fractal.svg?style=flat-square)](https://github.com/PHP-Open-Source-Saver/fractal/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![CI Tests](https://github.com/api-ecosystem-for-laravel/dingo-api/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/PHP-Open-Source-Saver/fractal/actions)
+[![CI Tests](https://github.com/PHP-Open-Source-Saver/fractal/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/PHP-Open-Source-Saver/fractal/actions)
 [![Development Version](https://img.shields.io/packagist/vpre/PHP-Open-Source-Saver/fractal.svg?style=flat-square)](https://packagist.org/packages/PHP-Open-Source-Saver/fractal)
 
 
