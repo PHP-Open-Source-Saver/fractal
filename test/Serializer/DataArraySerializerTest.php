@@ -1,4 +1,4 @@
-<?php namespace PHPOpenSourceSaver\Fractal\Test\Resource;
+<?php namespace PHPOpenSourceSaver\Fractal\Test\Serializer;
 
 use PHPOpenSourceSaver\Fractal\Manager;
 use PHPOpenSourceSaver\Fractal\Resource\Collection;
